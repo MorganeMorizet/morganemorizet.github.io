@@ -1,0 +1,441 @@
+* {box-sizing: border-box}
+
+html, body {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  overscroll-behavior-x: none;
+  font-family: "Architects Daughter";
+}
+
+.map {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.inner {
+  position:relative;
+  width:9002px;
+  height:4004px;
+  background:url(../images/table.png) no-repeat center center / 100% auto;
+}
+
+.hotspot {
+  position:absolute;
+}
+
+#poivre{
+  content : url("../images/poivre.png");
+  top : 2000px;
+  left : 2000px;
+
+}
+
+#ail{
+  content : url("../images/ail.png");
+  top : 3550px;
+  left : 6660px;
+
+}
+
+#assiette{
+  content : url("../images/assiette.png");
+  top : 2000px;
+  left : 3000px;
+  width: 800px;
+  height: 842px;
+
+}
+
+
+#assiette2{
+  content : url("../images/assiette.png");
+  top : 3000px;
+  left : 500px;
+  width: 800px;
+  height: 842px;
+
+}
+
+#avocat{
+  content : url("../images/avocat.png");
+  top : 800px;
+  left : 6000px;
+  width: 550px;
+  height: 577.5px;
+
+}
+
+#beurre{
+  content : url("../images/beurre.png");
+  top : 100px;
+  left : 5000px;
+  width:652px;
+  height:450px;
+
+}
+
+
+
+#couteau{
+  content : url("../images/couteau.png");
+  top : 770px;
+  left : 350px;
+  width: 208px;
+  height:700px;
+
+}
+
+#couteau2{
+  content : url("../images/couteau2.png");
+  top : 100px;
+  left : 7000px;
+  width: 273px;
+  height:700px;
+
+}
+
+#couteau3{
+  content : url("../images/couteau3.png");
+  top : 1550px;
+  left : 4700px;
+  width: px;
+  height:px;
+
+}
+
+#crabe{
+  content : url("../images/crabe.png");
+  top : 3000px;
+  right : 400px;
+  width: 727px;
+  height:1000px;
+
+}
+
+#creme{
+  content : url("../images/creme.png");
+  top : 2500px;
+  left : 4500px;
+  width:378.8 px;
+  height:400px;
+
+}
+
+#farine{
+  content : url("../images/farine.png");
+  top : 900px;
+  left : 4000px;
+  width: px;
+  height:px;
+
+}
+
+#gamelle{
+  content : url("../images/gamelle.png");
+  top : 3050px;
+  left : 1850px;
+  width: 1289.15px;
+  height:950px;
+
+}
+
+#lait{
+  content : url("../images/lait.png");
+  top : 750px;
+  left : 1260px;
+  width: 1095px;
+  height:450px;
+
+}
+
+#louche{
+  content : url("../images/louche.png");
+  top : 2500px;
+  left : 7260px;
+  width: 1102px;
+  height:270px;
+
+}
+
+#muscade{
+  content : url("../images/muscade.png");
+  top : 3500px;
+  left : 3860px;
+  width: px;
+  height:px;
+
+}
+
+#oeuf{
+  content : url("../images/oeuf.png");
+  top : 300px;
+  left : 200px;
+  width: 546px;
+  height:300px;
+
+}
+
+#patates{
+  content : url("../images/patates.png");
+  top : 750px;
+  left : 8260px;
+  width: 740px;
+  height:500px;
+
+}
+
+#planche{
+  content : url("../images/planche.png");
+  top : 2000px;
+  left : 5260px;
+  width: 1013px;
+  height:600px;
+
+}
+
+#spatule{
+  content : url("../images/spatule.png");
+  top : 1000px;
+  left : 5360px;
+  width: 202px;
+  height:1100px;
+
+}
+
+#spatule2{
+  content : url("../images/spatule2.png");
+  top : 2900px;
+  left : 5060px;
+  width: 236px;
+  height:1100px;
+
+}
+
+#sucre{
+  content : url("../images/sucre.png");
+  top : 2000px;
+  left : 700px;
+  width: px;
+  height:px;
+
+}
+
+#casserole{
+  content : url("../images/casserole.png");
+  top : 1050px;
+  left : 7560px;
+  width: 921px;
+  height:1300px;
+
+}
+
+#concombre{
+  content : url("../images/concombre.png");
+  top : 100px;
+  left : 1860px;
+  width: px;
+  height:px;
+
+}
+
+#huile{
+  content : url("../images/huile.png");
+  top : 3250px;
+  left : 5260px;
+  width: 1076px;
+  height:400px;
+
+}
+
+#pomme{
+  content : url("../images/pomme.png");
+  top : 950px;
+  left : 3260px;
+  width: px;
+  height:px;
+
+}
+
+#poire{
+  content : url("../images/poire.png");
+  top : 1550px;
+  left : 6760px;
+  width: 536px;
+  height:500px;
+
+}
+
+#algue{
+  content : url("../images/algue.png");
+  top : 250px;
+  left : 3260px;
+  width: 682px;
+  height:600px;
+
+}
+
+#carotte{
+  content : url("../images/carotte.png");
+  top : 2550px;
+  left : 6260px;
+  width: 133px;
+  height:600px;
+
+}
+
+#riz{
+  content : url("../images/riz.png");
+  top : 250px;
+  left : 7660px;
+  width: px;
+  height:px;
+
+}
+
+#sel{
+  content : url("../images/sel.png");
+  top : 1500px;
+  left : 0px;
+  width: px;
+  height:px;
+
+}
+
+.hotspot.found {
+  opacity:.5 !important;
+}
+
+.count {
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:white;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:32px;
+  z-index:10000;
+
+}
+
+.menu {
+  position:fixed;
+  top:100px;
+  right:20px;
+  z-index:10000;
+  background-image: url(../images/fondpapier.png);
+  border-radius: 10px;
+
+}
+
+.menu-item {
+  width:250px;
+
+  padding:8px 16px;
+  border-radius:3px;
+  font-size:22px;
+  margin-bottom:4px;
+  display:flex;
+  align-items: center;
+
+}
+.icon{
+  width: 40px;
+  height:40px;
+  border: solid 1px;
+  border-color: black;
+
+  margin-right: 15px;
+}
+
+.menu-item .item-not-found {
+  display:block;
+
+}
+
+.menu-item .item-found {
+  display:none;
+
+}
+
+.menu-item.found .item-not-found {
+  display:none;
+
+}
+
+.menu-item.found .item-found {
+  display:block;
+  text-decoration: line-through red;
+
+}
+.menu-info{
+  width:250px;
+
+  padding:8px 16px;
+  border-radius:3px;
+  font-size:22px;
+  margin-bottom:4px;
+  display:flex;
+  text-align: center;
+
+}
+
+.menu-item[data-hotspot="patates"] .icon{
+
+  background: url(../images/patates.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="poivre"] .icon{
+
+  background: url(../images/poivre.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="ail"] .icon{
+
+  background: url(../images/ail.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="creme"] .icon{
+
+  background: url(../images/creme.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="beurre"] .icon{
+
+  background: url(../images/beurre.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="lait"] .icon{
+
+  background: url(../images/lait.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="muscade"] .icon{
+
+  background: url(../images/muscade.png) no-repeat center center/ contain white;
+
+}
+.menu-item[data-hotspot="sel"] .icon{
+
+  background: url(../images/sel.png) no-repeat center center/ contain white;
+
+}
+#gif{
+  top: 50%;
+  left:50%;
+  position : fixed;
+  transform : translateX(-50%) translateY(-50%);
+}
+.chargement{
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:black;
+  z-index: 1000000000000;
+}

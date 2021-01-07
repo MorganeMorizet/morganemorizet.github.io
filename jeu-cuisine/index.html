@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP Drag'n'explore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="chargement"><img id='gif' src ="images/Composition 1.gif"></div>
+  <div class="map">
+    <div class="inner">
+
+
+
+
+      <div class="hotspot cliquable" id="poivre"></div>
+      <div class="hotspot cliquable" id="ail"></div>
+      <div class="hotspot" id="assiette"></div>
+      <div class="hotspot" id="assiette2"></div>
+      <div class="hotspot" id="avocat"></div>
+      <div class="hotspot cliquable" id="beurre"></div>
+      <div class="hotspot" id="couteau"></div>
+      <div class="hotspot" id="couteau2"></div>
+      <div class="hotspot" id="couteau3"></div>
+      <div class="hotspot" id="crabe"></div>
+      <div class="hotspot cliquable" id="creme"></div>
+      <div class="hotspot" id="farine"></div>
+      <div class="hotspot" id="gamelle"></div>
+      <div class="hotspot cliquable" id="lait"></div>
+      <div class="hotspot" id="louche"></div>
+      <div class="hotspot cliquable" id="muscade"></div>
+      <div class="hotspot" id="oeuf"></div>
+      <div class="hotspot cliquable" id="patates"></div>
+      <div class="hotspot" id="planche"></div>
+      <div class="hotspot" id="spatule"></div>
+      <div class="hotspot" id="spatule2"></div>
+      <div class="hotspot" id="sucre"></div>
+      <div class="hotspot" id="casserole"></div>
+      <div class="hotspot" id="concombre"></div>
+      <div class="hotspot" id="huile"></div>
+      <div class="hotspot" id="pomme"></div>
+      <div class="hotspot" id="poire"></div>
+      <div class="hotspot" id="algue"></div>
+      <div class="hotspot" id="carotte"></div>
+      <div class="hotspot" id="riz"></div>
+      <div class="hotspot cliquable" id="sel"></div>
+    </div>
+  </div>
+
+
+  <div class="count">
+    <span id="count_found">0</span> / 8
+  </div>
+
+  <div class="menu">
+    <div class="menu-info">Gratin Dauphinois
+    </div>
+
+
+
+
+    <div class="menu-item" data-hotspot="patates">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Patates ?</div>
+        <div class="item-found">Patates</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="ail">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Ail ?</div>
+        <div class="item-found">Ail</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="creme">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Crème ?</div>
+        <div class="item-found">Crème</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="beurre">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Beurre ?</div>
+        <div class="item-found">Beurre</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="lait">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Lait ?</div>
+        <div class="item-found">Lait</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="muscade">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Muscade ?</div>
+        <div class="item-found">Muscade</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="sel">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Sel ?</div>
+        <div class="item-found">Sel</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-hotspot="poivre">
+      <div class="icon"></div>
+      <div class="content">
+        <div class="item-not-found">Poivre ?</div>
+        <div class="item-found">Poivre</div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/scrollbooster.min.js"></script>
+
+  <script type="text/javascript">
+  let count_found = 0;
+
+  $(document).ready(function(){
+    setTimeout(function() {
+      $(".chargement").fadeOut();
+    }, 2000);
+  });
+
+
+  $(function() {
+
+    $('.cliquable').not('.found').one('click', function(){
+      count_found++;
+      $(this).addClass('found');
+
+      let id = $(this).attr('id');
+      $('.menu-item[data-hotspot="'+id+'"]').addClass('found');
+
+      $('#count_found').text(count_found);
+    });
+
+
+
+    var scrollElScroll = document.querySelector(".map .inner");
+
+    var scr = new ScrollBooster({
+      viewport: document.querySelector(".map"),
+      emulateScroll: true,
+      bounce: false, // Pour éviter l'effet élastique
+      // friction: 0.2, // Pour régler la friction du déplacement
+      onUpdate: function(data) {
+        scrollElScroll.style.transform =
+          "translate(" + -data.position.x + "px, " + -data.position.y + "px)";
+      },
+    });
+
+
+    //scr.setPosition({
+      //x: 500,
+      //y: 500
+    //});
+
+  });
+</script>
+</body>
+</html>
